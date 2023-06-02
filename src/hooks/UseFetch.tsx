@@ -5,15 +5,16 @@ import { useState, useEffect } from "react";
 import { getData } from "../utils/API";
 
 export const useFetch = () => {
-  const [state, setState] = useState<any>();
+  const [state, setState] = useState<any>([] as any);
 
   useEffect(() => {
     getData().then((res: any) => {
-      setState(res?.data);
+      setState(res);
     });
   }, []);
 
   
 
-  return state?.data;
+  return state;
+
 };

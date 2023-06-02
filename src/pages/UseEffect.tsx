@@ -5,6 +5,7 @@ import { useFetch } from "../hooks/UseFetch";
 
 const UseEffect = () => {
   const state = useFetch();
+  const data = state?.data
   
   return (
     <div>
@@ -12,7 +13,7 @@ const UseEffect = () => {
       <div>
         <Card>
          {
-            state?.map((el:any) =>(
+            data?.map((el:any) =>(
                 <Container>
                 <Image src={el?.images[0]} loading="lazy" />
               </Container>
