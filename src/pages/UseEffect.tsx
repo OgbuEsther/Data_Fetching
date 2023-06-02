@@ -1,9 +1,10 @@
 import React from "react";
-import { UseFetch } from "../hooks/UseFetch";
+
 import styled from "styled-components";
+import { useFetch } from "../hooks/UseFetch";
 
 const UseEffect = () => {
-  const state = UseFetch();
+  const state = useFetch();
   
   return (
     <div>
@@ -34,7 +35,7 @@ const Image = styled.img`
 const Container = styled.div`
   border: 1px solid black;
   border-radius: 5px;
-  width: 250px;
+  width: 300px;
   height: 300px;
   overflow: hidden;
 `;
