@@ -1,18 +1,22 @@
-import React from 'react'
+import React,{PropsWithChildren} from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 // https://api.escuelajs.co/api/v1/products
 
-const ReadFiles = () => {
+const ReadFiles:React.FC<PropsWithChildren> = ({children}) => {
   return (
     <div>
       <Container>
         <Main>
           <Navs>
-            <Button bg='purple'>UseEffect</Button>
-            <Button bg = "blue">TanStack</Button>
-            <Button bg = "black">SWR</Button>
+            <Button to ="/" bg='purple'>UseEffect</Button>
+            <Button to ="/tanstack" bg = "blue">TanStack</Button>
+            <Button to ="swr" bg = "black">SWR</Button>
           </Navs>
         </Main>
+        <Holder>
+          {children}
+        </Holder>
       </Container>
     </div>
   )
@@ -21,8 +25,15 @@ const ReadFiles = () => {
 export default ReadFiles
 
 
+const Holder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+`
 
-const Button = styled.button<{bg:string}>`
+
+const Button = styled(Link)<{bg:string}>`
 margin-left: 20px;
 margin-right: 20px;
 border: 1px solid gray;
@@ -52,6 +63,8 @@ width: 100%;
 justify-content: center;
 align-items: center;
 display: flex;
+flex-direction: column;
+
 padding-top: 50px;
 
 `

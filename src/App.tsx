@@ -1,5 +1,4 @@
-import React from 'react'
-import ReadFiles from './pages/ReadFiles'
+
 import {RouterProvider} from "react-router-dom"
 import { MainRoute } from './routes/MainRoute'
 const App = () => {
