@@ -11,7 +11,7 @@ const ReadFiles:React.FC<PropsWithChildren> = ({children}) => {
           <Navs>
             <Button to ="/" bg='purple'>UseEffect</Button>
             <Button to ="/tanstack" bg = "blue">TanStack</Button>
-            <Button to ="swr" bg = "black">SWR</Button>
+            <Button to ="/swr" bg = "black">SWR</Button>
           </Navs>
         </Main>
         <Holder>
